@@ -11,5 +11,7 @@ yarn-error.log
 .DS_Store
 /coverage
 
-
-
+dist/
+src/pages
+src/assets/css
+src/assets/js

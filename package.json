@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "npx gulp"
   },
   "repository": {
     "type": "git",
@@ -20,19 +21,23 @@
   },
   "homepage": "https://github.com/liangjiayu/static-page-workflow#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
     "art-template": "^4.13.2",
     "autoprefixer": "^10.3.1",
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-html-tpl": "^0.5.2",
-    "gulp-postcss": "^9.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.35.2"
   }
 }
