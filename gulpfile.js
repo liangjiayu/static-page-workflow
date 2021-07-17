@@ -78,17 +78,26 @@ function server() {
   });
 }
 
+function clearDev() {
+  return del(["./src/assets/css/", "./src/assets/js/", "./src/pages/"]);
+}
+
 function watch() {
   gulp.watch("./src/views/public/*.html", gulp.series(delHtml, compileHtml));
 
   gulp.watch(
     ["./src/views/**/*.html", "!./src/views/public/*.html"],
+    { ignoreInitial: false },
     compileHtml
   );
 
-  gulp.watch("./src/style/**/*.scss", compileStyles);
+  gulp.watch("./src/style/**/*.scss", { ignoreInitial: false }, compileStyles);
 
-  gulp.watch("./src/script/**/*.js", babelScript);
+  gulp.watch("./src/script/**/*.js", { ignoreInitial: false }, babelScript);
+
+  setTimeout(() => {
+    server();
+  }, 500);
 }
 // dev end
 
@@ -138,10 +147,11 @@ function buildScript() {
     .pipe(gulp.dest("./dist/assets/js/"));
 }
 
-exports.start = gulp.parallel(server, watch);
+// build end
+
+exports.start = gulp.series(clearDev, watch);
 exports.build = gulp.series(
   clearDist,
   gulp.parallel(buildHtml, buildStyle, buildScript),
   moveLibs
 );
-// build end

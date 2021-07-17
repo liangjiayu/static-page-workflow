@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "npx gulp"
+    "start": "npx gulp start",
+    "build": "npx gulp build"
   },
   "repository": {
     "type": "git",
