@@ -1,0 +1,25 @@
+{
+  "name": "static-page-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangjiayu/static-page-workflow.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangjiayu/static-page-workflow/issues"
+  },
+  "homepage": "https://github.com/liangjiayu/static-page-workflow#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
