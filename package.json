@@ -1,7 +1,8 @@
 {
   "name": "static-page-workflow",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "快速制作纯静态页面",
   "main": "index.js",
   "scripts": {
     "start": "npx gulp start",
@@ -20,6 +21,14 @@
     "url": "https://github.com/liangjiayu/static-page-workflow/issues"
   },
   "homepage": "https://github.com/liangjiayu/static-page-workflow#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
