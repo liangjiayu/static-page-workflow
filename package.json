@@ -13,7 +13,9 @@
     "url": "git+https://github.com/liangjiayu/static-page-workflow.git"
   },
   "keywords": [
-    "gulp"
+    "gulp",
+    "scss",
+    "workflow"
   ],
   "author": "",
   "license": "ISC",
