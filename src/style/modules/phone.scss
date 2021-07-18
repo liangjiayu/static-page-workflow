@@ -1,0 +1,86 @@
+// mobile base
+@use "sass:math";
+// 定义设计的字体大小为100px 根据设计的尺寸 计算对应的vw 推荐设计稿为 750
+$htmlSize: math.div(100vw, math.div(750, 100));
+
+html {
+  font-size: $htmlSize !important;
+}
+
+@media screen and (min-width: 751px) {
+  html {
+    font-size: 100px !important;
+  }
+}
+
+@function rem($px) {
+  @return math.div($px, 100px) * 1rem;
+}
+
+body {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.index-swiper {
+  display: block;
+  margin-bottom: rem(40px);
+  img {
+    display: block;
+    width: 100%;
+    height: rem(750px);
+  }
+}
+
+.index-list-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 rem(20px);
+  justify-content: space-between;
+
+  .item {
+    display: block;
+    width: 48%;
+    padding-bottom: rem(40px);
+    // height: rem(300px);
+    margin-bottom: rem(40px);
+    background-color: #f5f5f5;
+  }
+
+  .item-img {
+    display: block;
+    width: rem(300px);
+    height: rem(300px);
+    margin: rem(20px) auto;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    font-size: rem(26px);
+    color: #333;
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+
+  .desc {
+    text-align: center;
+    font-size: rem(22px);
+    color: #666;
+    margin-bottom: rem(10px);
+  }
+
+  .price {
+    text-align: center;
+    color: #ff6700;
+    font-size: rem(26px);
+    del {
+      font-size: rem(22px);
+      color: #666;
+    }
+  }
+}
