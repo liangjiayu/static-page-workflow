@@ -1,0 +1,14 @@
+// mixins
+@mixin text-overflow($line: 1) {
+  overflow: hidden;
+  @if $line==1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+}

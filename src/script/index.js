@@ -1,5 +1,11 @@
-const aa = '1';
+class Point {
+  num = 1;
 
-const bb = (aa) => {
-  console.log('bb');
-};
+  getNum = () => {
+    console.log(this.num);
+  };
+
+  addNum = () => {
+    this.num = this.num + 1;
+  };
+}

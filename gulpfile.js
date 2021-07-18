@@ -40,7 +40,7 @@ function compileHtml() {
 
 function compileStyles() {
   return gulp
-    .src('./src/style/**/*.scss')
+    .src(['./src/style/**/*.scss', '!./src/style/mixins/*'])
     .pipe(
       changed('./src/assets/css/', {
         extension: '.css',
@@ -106,8 +106,10 @@ function clearDist() {
   return del(['./dist/**']);
 }
 
-function moveLibs() {
-  return gulp.src('./src/assets/libs/*').pipe(gulp.dest('./dist/assets/libs'));
+function moveAssets() {
+  return gulp
+    .src(['./src/assets/**/*', '!./src/assets/css/**', '!./src/assets/js/**'])
+    .pipe(gulp.dest('./dist/assets/'));
 }
 
 function buildHtml() {
@@ -128,7 +130,7 @@ function buildHtml() {
 
 function buildStyle() {
   return gulp
-    .src('./src/style/**/*.scss')
+    .src(['./src/style/**/*.scss', '!./src/style/mixins/*'])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({}))
     .pipe(cleanCSS())
@@ -153,5 +155,5 @@ exports.start = gulp.series(clearDev, watch);
 exports.build = gulp.series(
   clearDist,
   gulp.parallel(buildHtml, buildStyle, buildScript),
-  moveLibs
+  moveAssets
 );

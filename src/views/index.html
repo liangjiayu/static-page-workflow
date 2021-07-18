@@ -1,12 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>99999</div>
-</body>
-</html>
+<template src="./public/head.html" title="首页" basePath="../../"></template>
+
+<link rel="stylesheet" href="../assets/css/modules/index.css" />
+<script src="../assets/js/index.js"></script>
+
+<div class="index-swiper">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://iph.href.lu/1200x300" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://iph.href.lu/1200x300" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://iph.href.lu/1200x300" alt="" />
+      </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script>
+  var mySwiper = new Swiper('.index-swiper .swiper-container', {
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var aa = new Point();
+  console.log(aa);
+  aa.addNum();
+  aa.getNum();
+</script>
+
+<!-- list -->
+<div class="index-list-box">
+  <div class="item">
+    <div class="item-img">
+      <img src="https://iph.href.lu/500x500" alt="" />
+    </div>
+    <div class="title">手机手机</div>
+    <div class="desc">手机描述手机描述</div>
+    <div class="price">
+      <span>1999元</span>
+      <del>2400元</del>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-img">
+      <img src="../assets/images/img01.png" alt="" />
+    </div>
+    <div class="title">手机手机</div>
+    <div class="desc">手机描述手机描述</div>
+    <div class="price">
+      <span>1999元</span>
+      <del>2400元</del>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-img">
+      <img src="https://iph.href.lu/500x500" alt="" />
+    </div>
+    <div class="title">手机手机</div>
+    <div class="desc">手机描述手机描述</div>
+    <div class="price">
+      <span>1999元</span>
+      <del>2400元</del>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-img">
+      <img src="https://iph.href.lu/500x500" alt="" />
+    </div>
+    <div class="title">手机手机</div>
+    <div class="desc">手机描述手机描述</div>
+    <div class="price">
+      <span>1999元</span>
+      <del>2400元</del>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-img">
+      <img src="https://iph.href.lu/500x500" alt="" />
+    </div>
+    <div class="title">手机手机</div>
+    <div class="desc">手机描述手机描述</div>
+    <div class="price">
+      <span>1999元</span>
+      <del>2400元</del>
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  $(function () {
+    $('.index-list-box').addClass('sss')
+  })
+</script> -->
+
+<template src="./public/footer.html"></template>
