@@ -1,0 +1,8 @@
+**/*.svg
+**/*.ejs
+package.json
+package-lock.json
+
+dist/
+src/pages/**/**
+src/assets/**/**
